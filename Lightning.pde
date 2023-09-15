@@ -1,13 +1,13 @@
 int startX;
 int startY;
 int endX; 
-int endY;
+int endY = 600;
 PImage moon;
 
 void setup(){
   size(600,600);
-  moon = loadImage("https://www.astronomy.com/wp-content/uploads/sites/2/2023/03/ASYSM0123_07.png?fit=600%2C338");
   background(0,0,0);
+  moon = loadImage("https://www.astronomy.com/wp-content/uploads/sites/2/2023/03/ASYSM0123_07.png?fit=600%2C338");
   fill(128, 128, 128);
   noStroke();
   ellipse(55,10,50,50);
@@ -21,11 +21,14 @@ void setup(){
   strokeWeight(3);
 }
 void draw(){
-stroke((int)(Math.random()*100)+150, (int)(Math.random()*100)+100, 35);
-
-while (endX < 300){
+stroke((int)(Math.random()*100)+150, (int)(Math.random()*100)+100, 35, 155);
+  
+if (endY < 600){
   endX = startX + (int)(Math.random()*10);
-  endY = startY + (int)(Math.random()*19)-9;
+  endY = startY + (int)(Math.random()*19);
+  line(startX, startY, endX, endY);
+  startX = endX;
+  startY = endY;
   }
 }
 void mousePressed(){
