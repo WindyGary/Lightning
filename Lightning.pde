@@ -16,14 +16,14 @@ void setup(){
   strokeWeight(5);
 }
 void draw(){
-  gameTick+= 2;
+  gameTick++;
   
   if (boltCount % 10 == 0 && gameTick < 25){
-    fill(255,255,0,30);
+    fill(255,255,0,10);
     noStroke();
     rect(0,0,600,600);
   } else {
-     fill(0,0,0,45);
+     fill(0,0,0,15);
   noStroke();
   rect(0,0,600,600);
   }
