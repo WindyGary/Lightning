@@ -73,7 +73,7 @@ void bolt(){
 
 
 void specialBolt1(){
-  stroke(169, 41, 238,255);
+  stroke(255, 41, 238,255);
   strokeWeight(10);
     if (Math.random() < 0.5){
   endX = startX -((int)(Math.random()*20));
