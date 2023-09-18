@@ -19,11 +19,11 @@ void draw(){
   gameTick++;
   
   if (boltCount % 10 == 0 && gameTick < 25){
-    fill(255,255,0,10);
+    fill(255,255,0,30);
     noStroke();
     rect(0,0,600,600);
   } else {
-     fill(0,0,0,15);
+     fill(0,0,0,45);
   noStroke();
   rect(0,0,600,600);
   }
