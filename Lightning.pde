@@ -16,7 +16,7 @@ void setup(){
   strokeWeight(5);
 }
 void draw(){
-  gameTick++;
+  gameTick+= 0.5;
   
   if (boltCount % 10 == 0 && gameTick < 25){
     fill(255,255,0,30);
